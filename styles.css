@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&family=Oswald:wght@300;400;500;600&display=swap');
+
+:root {
+
+    --header-height: 3.5rem;
+
+
+
+    /* COLOR SCHEME */
+    --first-color: #1d202c;
+    --first-color-alt: #45516a;
+    --second-color: #b8bbc1;
+    --second-color-alt: #9499b6;
+    --text-color: #ffffff;
+
+
+
+    /* Typography */
+
+    --body-font: "Oswald", sans-serif;
+    --biggest-font-size: 1.75rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: .85rem;
+    --smaller-font-size: 0.75rem;
+    --smallest-font-size: 0.638rem;
+
+    /* Font Sizes */
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+
+}
+
+/* RESPONSIVENESS  */
+
+@media screen and (max-width: 968px) {
+    :root {
+        --biggest-font-size: 2.5rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.75rem;
+        --h3--font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .85rem;
+        --smaller-font-size: 0.75rem;
+        --smallest-font-size: 0.638rem;
+
+
+
+    }
+
+
+}
+
+/* GLOBAL CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--first-color);
+
+}
+
+body,
+button,
+input,
+textarea {
+    font-family: var(--body-font);
+    font-weight: var(--font-regular)
+}
+
+h1,
+h2,
+h3 {
+    color: var(--text-color);
+    font-weight: var(--font-semi-bold);
+}
+
+p {
+    color: var(--second-color-alt);
+    font-weight: var(--font-light);
+}
+
+li,
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* REUSABLE CSS CLASSES */
+
+.container {
+    max-width: 968px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+}
+
+
+.section {
+    padding: 4.5rem 0 1rem;
+}
+
+
+.section__title,
+.section__subtitle {
+    text-align: center;
+}
+
+.section__title {
+    font-size: var(--h2-font-size);
+    color: var(--second-color);
+    margin-bottom: .5rem;
+}
+
+.section__subtitle {
+    font-size: var(--h3-font-size);
+    color: var(--second-color);
+    margin-bottom: 1rem;
+}
+
+/* NAVBAR HEADER */
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--first-color-alt);
+    height: auto;
+    color: var(--text-color)
+}
+
+.scroll__header {
+    box-shadow: 0 .15rem .25rem rgba(156, 156, 156, 0.432);
+    transition: .2s;
+}
+
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--header-height);
+
+}
+
+.nav__icon {
+    font-size: 1.5rem;
+}
+
+.nav__logo {
+    font-size: var(--font-normal);
+    font-weight: var(--font-semi-bold);
+}
+
+.nav__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.nav__btns {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.nav__close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+    visibility: hidden;
+
+}
+
+.line {}
+
+/* MEDIA Queries */
+
+@media screen and (max-width: 768px) {
+
+    .nav__menu {
+        position: fixed;
+        background-color: var(--first-color-alt);
+        top: 0;
+        right: -80rem;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 4rem 0;
+        box-shadow: 0px 2px .5rem hsl(212, 100%, 89%);
+        transition: .5s;
+        z-index: 100;
+
+    }
+
+
+
+    .nav__list {
+        display: flex;
+        flex-direction: column;
+        height: 12rem;
+        font-size: var(--normal-font-size);
+        margin-bottom: .5rem;
+    }
+
+
+    .nav__close {
+        visibility: visible;
+    }
+
+}
+
+
+.show__menu {
+    right: 0;
+}
+
+
+/* INTRO SECTION */
+
+.intro {
+    text-align: center;
+}
+
+.intro__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.intro__image {
+    height: 10rem;
+    object-fit: contain;
+    border-radius: 80rem;
+
+}
+
+.intro__links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+
+
+
+.icon__links {
+    font-size: 2.5rem;
+
+}
+
+.intro__box {
+    padding: .5rem;
+    background-color: var(--first-color-alt);
+    border-radius: 1rem;
+}
+
+.intro__box:hover {
+    background-color: var(--second-color-alt);
+    transition: .5s;
+}
+
+
+.intro__buttons {
+    color: var(--second-color);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.button {
+    padding: .75rem .75rem;
+    border: 1px solid var(--first-color-alt);
+    border-radius: 1.5rem;
+    background-color: var(--second-color-alt);
+    color: var(--first-color)
+}
+
+.button:hover {
+    background-color: var(--first-color);
+    transition: .5s;
+    color: var(--second-color-alt);
+}
+
+
+.button__ghost {
+    background-color: transparent;
+    border: 2px solid var(--second-color-alt);
+    color: var(--second-color-alt);
+}
+
+.button__ghost:hover {
+    background-color: var(--second-color-alt);
+    color: var(--first-color);
+    transition: .5s;
+}
+
+/* ABOUT */
+
+
+
+/* SKILLS */
+
+.skills__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+
+}
+
+.skills__group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+
+.skills__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .5rem;
+    width: 5rem;
+    background-color: var(--second-color-alt);
+    transition: .3s;
+
+}
+
+.skills__description {
+    color: var(--first-color);
+}
+
+.skills__level {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+
+
+.skills__img {
+    height: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+
+    .skills__box {
+        padding: 2rem;
+        width: 8rem;
+        transition: .3s;
+    }
+
+
+
+    .skills__img {
+        height: 5rem;
+    }
+
+
+
+
+
+}

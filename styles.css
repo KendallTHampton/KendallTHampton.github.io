@@ -571,6 +571,12 @@ img {
     }
 
 
+    .project__img {
+        height: 25rem;
+        width: 100%;
+        object-fit: contain;
+    }
+
     .project__box {
         margin: .5rem;
         width: 50%;

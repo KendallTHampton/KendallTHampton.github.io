@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 
 <body>
@@ -44,7 +45,7 @@
 
                 <div class="nav__btns">
                     <!-- Theme Change Button -->
-                    <i class='bx bx-moon change__theme nav__icon' id="change-theme"></i>
+                    <a href="#"><i class='bx bx-home change__theme nav__icon' id="change-theme"></i></a>
 
                     <!-- Toggle Button -->
                     <div class="nav__toggle" id="nav-toggle">
@@ -59,7 +60,8 @@
             </nav>
         </header>
 
-        <!-- INTRODUCTION -->
+        <!-- INTRODUCTION SECTION -->
+
         <section class="intro section" id="home">
 
             <h1 class="section__title">I am Kendall Hampton</h1>
@@ -68,8 +70,7 @@
             <div class="intro__container container grid">
 
                 <div class="image">
-                    <img src="https://media-exp1.licdn.com/dms/image/C4D03AQF1LmSVRZBXfQ/profile-displayphoto-shrink_400_400/0/1595303425116?e=1648684800&v=beta&t=jl-tJxK2rVFPPTqN3JvbQ-nBEHnoKcZ2jmPL3UQZJKw"
-                        alt="" class="intro__image">
+                    <img src="assets/kendall.jpg" alt="" class="intro__image">
                 </div>
 
 
@@ -78,7 +79,7 @@
 
                     <a download="" href="./Kendall Hampton Resume1.docx" class="button button__ghost">Download My
                         Resume</a>
-                    <a class="button">Learn More About Me</a>
+                    <a class="button" href="#about">Learn More About Me</a>
 
                 </div>
 
@@ -134,21 +135,24 @@
             <p class="section__subtitle">Who Am I?</p>
 
             <div class="about__container container grid">
-                <h1>Why?</h1>
-                <p>I a self-taught developer concentrating in fullstack development. I taught myself how to code during
-                    the
-                    pandemic not only to combat the boredom of quarantine, but I wanted to build a tangible skill.
-                    Technology is a exciting path and possibilities are endless. </p>
+                <h1 class="introduction">Intro</h1>
+                <p>My name is Kendall, I am a self-taught web developer! My web developer journey started in March 2021,
+                    after failing to find employment during the Covid-19 pandemic. I decided to teach myself how to code
+                    because I wanted to build highly transferable skills and have more job opportunities. I have learned
+                    a lot this past year and hope to have a developer job by the end of 2022! </p>
 
-                <h1>Goals!</h1>
-                <p>I plan on becoming a junior developer at a company willing to give me a chance. Will increase my
-                    skillset and knowledge of a new industry for me. </p>
+                <h1 class="introduction">My Story</h1>
+                <p>I graduated from Towson University in 2020 with a Bachelor of Science in Business Administration,
+                    concentrating in Marketing. Through my brief work experience, I have been able to work for a
+                    multitude of retail positions and the local government of Maryland. </p>
 
 
 
             </div>
         </section>
 
+
+        <!-- SKILLS SECTION -->
 
         <section class="skills section" id="skills">
             <h1 class="section__title">My Skills</h1>
@@ -214,8 +218,97 @@
         </section>
 
 
+        <!-- PROJECTS SECTION -->
+        <section class="projects section" id="projects">
+            <h1 class="section__title">My Projects</h1>
+            <p class="section__subtitle">What I Have Made</p>
+
+            <div class="projects__container container grid">
+
+                <div class="projects__wrapper">
+
+                    <div class="project__box">
+                        <h1 class="project__heading">To-Do-List</h1>
+                        <p class="project__description">I made a basic to-do-list using HTML, CSS, Embedded Javascript
+                            (ejs) Node/Express and
+                            MongoDB. The goal was to create a simple website to demonstrate my knowledge of these
+                            languges/libraries </p>
+
+                        <img src="./assets/Todolist.png" alt="" class="project__img">
+                        <a class="project__button" href="https://boiling-sands-79094.herokuapp.com/" target="_blank"
+                            rel="noopener noreferrer">Look At My
+                            Project!</a>
+                    </div>
+
+                    <div class="project__box">
+                        <h1 class="project__heading">Mock Agency Page</h1>
+                        <p class="project__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est
+                            repellat quas fugit! Rem porro
+                            adipisci, praesentium reiciendis iste placeat, iure in quidem unde at accusamus dolores
+                            dicta ad labore deleniti!</p>
+                        <img src="./assets/MockAgency.png" alt="" class="project__img">
+                        <a class="project__button" href="https://radiant-basin-07623.herokuapp.com/" target="_blank"
+                            rel="noopener noreferrer">Look At My Project!</a>
+                    </div>
+
+                    <div class="project__box">
+                        <h1 class="project__heading">Blog Site</h1>
+                        <p class="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+                            fugiat debitis eius quam animi
+                            corrupti incidunt vitae at eaque, reiciendis blanditiis, sequi voluptatem iure minus! Quod
+                            aspernatur non velit eum.</p>
+                        <img src="./assets/BlogSite.png" alt="" class="project__img">
+                        <a class="project__button" href="https://calm-ridge-11738.herokuapp.com/" target="_blank"
+                            rel="noopener noreferrer">Look At My Project!</a>
+                    </div>
+                </div>
 
 
+            </div>
+        </section>
+
+
+        <!-- CONTACT ME SECTION -->
+
+        <section class="contact section" id="contact">
+
+            <h1 class="section__title">Contact Me</h1>
+            <p class="section__subtitle">I Would Love to Hear From You!</p>
+
+            <div class="contact__container container grid">
+
+
+                <form action="https://formsubmit.co/e34e5a6f1589dede02ac969603578ba3" method="POST" target="_blank">
+
+                    <div class="form">
+
+                        <div class="form__group">
+
+                            <div class="form__row">
+
+                                <input type="text" name="name" required placeholder="Enter Name">
+                                <input type="email" name="email" required placeholder="@Email">
+
+                                <input type="hidden" name="_subject" value="New submission!">
+                            </div>
+
+                        </div>
+
+                        <div class="form__group">
+                            <textarea class="message" placeholder="Write Your Message Here" name="message"
+                                required></textarea>
+                        </div>
+
+
+                    </div>
+                    <button class="contact__button" type="submit">Send Message</button>
+
+
+                </form>
+
+
+            </div>
+        </section>
 
     </main>
 
@@ -228,6 +321,10 @@
 
 
     <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

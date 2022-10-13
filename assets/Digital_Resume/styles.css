@@ -272,6 +272,7 @@ a {
 .work__date {
     margin-bottom: 1em;
     font-weight: 300;
+    color: var(--secondaryTextColor)
 }
 
 .jobDesc {

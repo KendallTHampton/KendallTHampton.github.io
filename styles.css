@@ -430,8 +430,11 @@ img {
 }
 
 .project__description {
-    color: var(--first-color);
+    color: rgb(52, 51, 51);
     margin-bottom: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    font-weight: 500;
 }
 
 .project__img {
@@ -447,7 +450,7 @@ img {
     background-color: var(--second-color);
     color: var(--first-color);
     font-size: var(--font-normal);
-    align-self: flex-start;
+    align-self: center;
     cursor: pointer;
 }
 
